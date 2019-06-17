@@ -616,7 +616,7 @@ div.box3 div.four, div.box3 div.two {
 .contentForm {
     width: 1260px;
     padding: 0px 100px;
-    height: 600px;
+    height: 500px;
     background: #fff;
     box-sizing: border-box;
 }
@@ -643,6 +643,11 @@ div.box3 div.four, div.box3 div.two {
     align-items: center;
 }
 
+.leftColumn {
+    position: relative;
+    height: 250px;
+}
+
 input.name, input.email {
     display: block;
     border: 1px solid #24BA9F;
@@ -667,26 +672,160 @@ input::placeholder {
 div.rightColumn {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
-    align-items: center;
     justify-content: space-between;
+    align-items: flex-start;
+}
+
+.rightColumn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 250px;
+    margin: 0 auto;
 }
 .rightColumn img {
-    margin-bottom: 50px;
-
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    max-width: 100%;
+    height: auto;
 }
 
+label.validation {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 1.5em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ /*Hide the browser's default radio button */
+.validation input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.validation {
+    display: flex;
+    justify-content: space-between;
+    width: 329px ;
+}
+.validation .click {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #24BA9F;
+    position: absolute;
+    left: 0;
+    background-image: url("../images/form_ok.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    font-size: 0.8em;
+    color: lightgray;
+    text-align: left;
+    top: 0;
+    left: 55px;
+    height: 25px;
+    width: 390px;
+}
 .rightColumn button {
-    display: inline-block;
-    padding: 15px 25px;
+    display: block;
+    padding: 10px 25px;
+    width: 400px;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
     background: #24BA9F;
     position: absolute;
-    bottom: 15px;
-    font-size: 1rem;
-    border-radius: 5px;
+    bottom: -110px;
+    font-size: 2rem;
+    border-radius: 10px;
     cursor: pointer;
+}
+
+/*-------FOOTER*/
+
+.contentFooter {
+    width: 1260px;
+    padding: 10px 10px;
+    height: 50px;
+    background: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contentFooter .rights {
+    color: rgba(169, 169, 169, 1);
+    font-size: 1em;
+}
+
+.socialMediaLinks {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 350px;
+    bottom: 30px;
+
 
 }
+
+a.flickr {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0 3px;
+    background-image: url("../images/flickr.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a.vimeo {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0 3px;
+    background-image: url("../images/vimeo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+a.pinterest {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0 3px;
+    background-image: url("../images/pinterest.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+a.twitter {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0 3px;
+    background-image: url("../images/twitter.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contentFooter .name {
+    text-transform: uppercase;
+    color: rgba(169, 169, 169, 1);
+}
+.contentFooter .name span {
+    font-weight: bolder;
+}
+
+
+
+
