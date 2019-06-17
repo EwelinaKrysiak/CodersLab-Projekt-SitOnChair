@@ -1,0 +1,692 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+/*--------------*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap&subset=latin-ext');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/*----------------MENU*/
+
+.content {
+    width: 1060px;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+header {
+    background: #000000;
+    padding: 5px 0;
+    height: 2.5em;
+}
+
+a {
+    cursor: pointer;
+}
+
+header,
+header a {
+    font-size: 1em;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    -webkit-transition: color 100ms linear;
+    -moz-transition: color 100ms linear;
+    -ms-transition: color 100ms linear;
+    -o-transition: color 100ms linear;
+    transition: color 100ms linear;
+}
+
+header nav a:hover {
+    color: #24BA9F;
+}
+
+header h1 {
+    line-height: 2.7rem;
+}
+
+header h1 span {
+    color: #24BA9F;
+    font-weight: 900;
+/ / POPRAWIC
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .content nav > ul > li {
+    float: left;
+    margin-left: 50px;
+    position: relative;
+}
+
+header .content ul li a {
+    padding: 5px;
+    display: inline-block;
+}
+
+header ul ul {
+    position: absolute;
+    padding-top: 40px;
+    top: 20px;
+    left: -20px;
+    display: none;
+}
+
+header ul ul li {
+    background: #000000;
+    padding: 5px;
+    position: relative;
+}
+
+header ul ul li a {
+    text-transform: capitalize;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul ul li {
+    position: relative;
+    z-index: 1000;
+}
+
+header ul ul li:first-child::after {
+    width: 30px;
+    height: 30px;
+    content: '';
+    background: #000000;
+    display: block;
+    top: -13px;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: calc(50% - 16px);
+    z-index: -10;
+}
+
+/*--------------------SLIDER */
+#slider {
+    height: 430px;
+    background: rgba(220, 220, 220, 0.5);
+    background: -moz-linear-gradient(top, #fafafa 0%, #d2d1d9 100%);
+    background: -webkit-linear-gradient(top, #fafafa 0%, #d2d1d9 100%);
+    background: linear-gradient(to bottom, #fafafa 0%, #d2d1d9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#d2d1d9', GradientType=0);
+
+}
+
+#slider .content {
+    position: relative;
+    height: 500px;
+}
+
+#slider .content #leftSlide {
+    font-size: 70px;
+    font-weight: lighter;
+    color: #24BA9F;
+    text-decoration: none;
+    position: absolute;
+    left: -20px;
+    padding: 20px;
+    display: inline-block;
+    top: 30%;
+}
+
+#slider .content #rightSlide {
+    font-size: 70px;
+    font-weight: lighter;
+    color: #24BA9F;
+    text-decoration: none;
+    right: -15px;
+    position: absolute;
+    padding: 20px;
+    display: inline-block;
+    top: 30%;
+}
+
+#slider .content {
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.slide {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 500px;
+}
+
+.slide img {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+
+.slide > div {
+    width: 60%;
+    padding-right: 70px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slide > div h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 0.7em;
+}
+
+.slide > div h4 span {
+    font-weight: bold;
+    color: #24BA9F;
+}
+
+.slide > div p {
+    line-height: 1.4em;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.slide > div a {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #24BA9F;
+    margin-top: 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/*----------------------PRODUCTS*/
+div.contentProducts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    box-sizing: border-box;
+    width: 1260px;
+    padding: 0 100px;
+}
+
+div.picture {
+    max-width: 100%;
+    margin: 10px 10px;
+    width: 33%;
+    padding: 20px 0;
+    position: relative;
+
+}
+
+div.picture img {
+    max-width: 100%;
+    height: auto;
+}
+
+div.overlay {
+    position: absolute;
+    top: 170px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+    height: 60px;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 0.8em;
+    color: black;
+}
+
+div.overlay::after {
+    content: "";
+    display: block;
+    background-color: #24BA9F;
+    width: 150px;
+    height: 5px;
+    margin-top: 5px;
+}
+
+div#article {
+    width: 349px;
+    height: 250px;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    margin-top: 30px;
+    margin-left: 10px;
+    padding: 20px 30px;
+
+}
+
+.article h1 {
+    font-size: 1em;
+    text-align: left;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 15px;
+}
+
+h1.article::after {
+    content: "";
+    display: block;
+    background-color: #24BA9F;
+    width: 150px;
+    height: 5px;
+    margin-top: 5px;
+}
+
+article {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    color: darkgray;
+
+}
+
+/*----------------PRICELIST*/
+
+.contentPricelist {
+    width: 1260px;
+    padding: 0 100px;
+    height: 700px;
+    background: rgba(220, 220, 220, 0.5);
+    box-sizing: border-box;
+}
+
+.contentPricelist h1 {
+    padding: 30px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: dimgray;
+    font-size: 1em;
+}
+.contentPricelist h1::after {
+    content: "";
+    display: block;
+    background-color: #24BA9F;
+    width: 150px;
+    height: 5px;
+    margin-top: 5px;
+}
+
+.contentPricelist .planBoxes {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 50px 0;
+}
+
+.box1, .box2, .box3 {
+    box-sizing: border-box;
+    width: 329px;
+    height: 500px;
+    border: 2px solid lightgray;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    position: relative;
+}
+
+
+.box1::before, .box3::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    background-color: white;
+}
+
+.box1::after, .box3::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    background-color: lightgray;
+    transform: translate(0%, 65%);
+}
+
+.box1 h2, .box3 h2 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #24BA9F;
+    text-align: center;
+    padding: 30px;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border: solid 2px lightgray;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgba(169, 169, 169, 1);
+    position: relative;
+}
+
+.circle span {
+    position: absolute;
+    left: 40px;
+    top: 35px;
+}
+.circle span::before {
+    content: "99";
+    font-size: 0.4em;
+    font-weight: bolder;
+    position: absolute;
+    right: -17px;
+}
+.circle span::after {
+    content: "PLN/MSC";
+    font-size: 0.4em;
+    font-weight: bolder;
+    position: absolute;
+    top: 40px;
+    left: -11px;
+}
+
+
+div.box1 div.block, div.box3 div.block {
+    height: 45px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(211, 211, 211, 1);
+    font-size: 1.3em;
+    padding-top: 10px;
+    color: gray;
+}
+div.box1 div.two {
+    background: rgba(220, 220, 220, 0.5);
+}
+
+.box1 a, .box3 a {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #24BA9F;
+    position: absolute;
+    bottom: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*----box2*/
+
+.box2 {
+    background-color: #24BA9F;
+    border: 2px solid #24BA9F;
+}
+
+.box2::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 2px solid #24BA9F;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    background-color: #24BA9F;
+}
+
+.box2::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    background-color: white;
+    transform: translate(0%, 65%);
+}
+
+.box2 h2 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.box2 .circle {
+    border: solid 2px white;
+    background-color: white;
+    color: #24BA9F;
+    position: relative;
+}
+
+div.box2 div.block {
+    height: 45px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    font-size: 1.3em;
+    padding-top: 10px;
+    color: gray;
+}
+div.box2 div.two {
+    background: rgba(211, 211, 211, 1);
+}
+
+.box2 a {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #24BA9F;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: white;
+    position: absolute;
+    bottom: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*--------box3*/
+
+div.box3 div.four, div.box3 div.two {
+    background: rgba(220, 220, 220, 0.5);
+}
+
+/*---------FORM*/
+
+.contentForm {
+    width: 1260px;
+    padding: 0px 100px;
+    height: 600px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.contentForm h1 {
+    padding: 30px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: dimgray;
+    font-size: 1em;
+}
+.contentForm h1::after {
+    content: "";
+    display: block;
+    background-color: #24BA9F;
+    width: 150px;
+    height: 5px;
+    margin-top: 5px;
+}
+
+.formBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input.name, input.email {
+    display: block;
+    border: 1px solid #24BA9F;
+    height: 65px;
+    width: 630px;
+}
+
+input.message {
+    display: block;
+    border: 1px solid #24BA9F;
+    height: 187px;
+    width: 630px;
+}
+input::placeholder {
+    font-size: 3em;
+    font-weight: lighter;
+    color: rgba(169, 169, 169, 1);
+    padding: 5px 10px;
+    vertical-align: text-after-edge;
+}
+
+div.rightColumn {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+}
+.rightColumn img {
+    margin-bottom: 50px;
+
+}
+
+.rightColumn button {
+    display: inline-block;
+    padding: 15px 25px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #24BA9F;
+    position: absolute;
+    bottom: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
