@@ -265,20 +265,23 @@ header ul ul li:first-child::after {
 }
 
 .slide {
-    display: flex;
+    display: none;
     justify-content: left;
     align-items: center;
     height: 500px;
+}
+
+div.slide.visible {
+    display:flex;
 }
 
 .slide img {
     width: 50%;
     height: auto;
     overflow: hidden;
-    display: none;
 }
 
-img.visible {
+img {
     display: block;
 }
 

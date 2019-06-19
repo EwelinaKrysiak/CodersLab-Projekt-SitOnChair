@@ -49,49 +49,43 @@ overlay.forEach(function (el) {
 
 //SLIDER----------------------
 
-
+var sliderDiv = document.querySelectorAll('div.slide');
 var arrowLeft = document.getElementById('leftSlide');
 var arrowRight = document.getElementById('rightSlide');
 
-var sliderImage = document.querySelectorAll('div.slide img');
-// console.log(arrowLeft);
-// console.log(sliderImage);
-
-
-sliderImage[0].classList.add('visible');
+sliderDiv[0].classList.add('visible');
 
 var index = 0;
 
 function changeSlide(onClick) {
     switch (onClick) {
-        case 'right':
-            sliderImage[index].classList.remove('visible');
-            index++;
-            if (index == sliderImage.length)
-                index = 0;
-            sliderImage[index].classList.add("visible");
+        case 'rightg':
+            sliderDiv[index].classList.remove('visible');
+            index++
+            if (index == sliderDIV.length)
+                index=0
+            sliderDiv[index].classList.add("visible");
             break;
         case 'left':
-            sliderImage[index].classList.remove("visible");
-            index--;
-            if (index < 0)
-                index = sliderImage.length - 1;
-            sliderImage[index].classList.add("visible");
+            sliderDiv[index].classList.remove("visible");
+            index--
+            if (index<0)
+                index = sliderDiv.length - 1
+            sliderDiv[index].classList.add("visible");
             break;
 
     }
 
 }
 
-arrowRight.addEventListener("click", function () {
+arrowRight.addEventListener("click",function () {
     changeSlide('right')
-
 });
 
-arrowLeft.addEventListener("click", function () {
+arrowLeft.addEventListener("click",function () {
     changeSlide('left')
-
 });
+
 
 
 
