@@ -476,7 +476,7 @@ article {
     transform: translate(0%, 65%);
 }
 
-.box1 h2, .box3 h2 {
+.box1 h4, .box3 h4 {
     text-transform: uppercase;
     font-size: 1.5em;
     color: #24BA9F;
@@ -576,7 +576,7 @@ div.box1 div.two {
     transform: translate(0%, 65%);
 }
 
-.box2 h2 {
+.box2 h4 {
     text-transform: uppercase;
     font-size: 1.5em;
     color: white;
@@ -764,6 +764,7 @@ label.validation {
     font-size: 2rem;
     border-radius: 10px;
     cursor: pointer;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*-------FOOTER*/
@@ -985,7 +986,7 @@ section.inline header {
     padding: 10px 30px;
     font-size: 24px;
     display: inline-block;
-    font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin-top: 20px;
     margin-left: 29px;
     border-radius: 8px;
